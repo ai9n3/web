@@ -12,16 +12,37 @@
             margin: 0;
             padding: 0;
         }
-        .top{
-            background-image: url(topinng.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
+        header {
+            position: relative;
+            margin-bottom: .5rem;
             text-align: center;
             
         }
-        .prof{
-            background-image: url(oredori.jpg);
-            background-size: cover;
+        header video {
+            object-fit: cover;
+            object-position: center top;
+            opacity: var(--video-opacity);
+            width: 100vw;
+            height: 90vh;
+        }
+        .header-text {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .header-text,
+        header video{
+            width: 100vw;
+            height: 90vh;
+        
+        }
+       
+     .prof{
+                  background-size: cover;
             background-repeat: no-repeat;
             text-align: center;
         }
@@ -33,10 +54,9 @@
   font-weight: 400;
   font-style: normal;
 }
-.top h1{
-    font-size: 6rem;
+.header-text{
+    font-size: 4rem;
     color: aquamarine;
-    padding-top: 30vh;
     animation: aito 3s forwards;
     opacity: 0;
 }
@@ -61,9 +81,12 @@
     </style>
 </head>
 <body>
-    <section class="top">
-      <h1 class="dela-gothic-one-regular">レジメサイト</h1>
-    </section>
+    <header>
+      <h1 class="header-text">レジメサイト</h1>
+      <video src="top.mp4" autoplay loop muted></video>
+    </header>
+    </body>
+    
 
     <section class="prof">
         <h2 class="dela-gothic-one-regular">プロフィール</h2>
